@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "pymusicbrainz"
+version = "0.1.0"
+description = "Python Binding for MusicBrainz Web Service"
+license = "BSD-3-Clause"
+authors = ["Shen-Ta Hsieh <ibmibmibm.tw@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/ibmibmibm/pymusicbrainz"
+keywords = ["musicbrainz"]
+packages = [
+    { include = "*/py.typed" },
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Multimedia :: Sound/Audio",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+httpx = "^0.11.1"
+lxml = "^4.5.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.3.5"
+pytest-asyncio = "^0.10.0"
+
+[tool.black]
+line-length = 80
+target-version = ["py36"]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
